@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Download Grüne Erde 3D models",
+  "version": "1.0",
+  "description": "Download 3D models from grueneerde.com",
+  "permissions": ["activeTab", "downloads", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["*://www.grueneerde.com/*"],
+      "js": ["FileSaver.min.js", "jszip.min.js", "content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
+
